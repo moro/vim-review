@@ -33,7 +33,7 @@ syn region reviewCmdCap start="^//cmd{" end="^//}"
 syn region reviewQuote  start="^//quote{" end="^//}"
 syn region reviewImage  start="^//image\[.*\]\[.*\]{" end="^//}"
 syn region reviewTable  start="^//table\[.*\]\[.*\]{" end="^//}"
-syn match reviewRef      "@<[a-z]\+>{.*}"
+syn match reviewRef      "@<[a-z]\+>{.\{-\}}"
 
 syn match reviewComment "^#@#.*"
 syn match reviewWarn "^#@warn(.*)"

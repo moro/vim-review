@@ -37,4 +37,5 @@ call SurroundRegister('b', 'k', "@<kw>{\r}")
 call SurroundRegister('b', 'f', "@<fn>{\r}")
 call SurroundRegister('b', 'l', "@<list>{\r}")
 call SurroundRegister('b', 'i', "@<i>{\r}")
+call SurroundRegister('b', 're', "@<recipe>{\r}")
 
