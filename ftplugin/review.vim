@@ -27,7 +27,9 @@ endfunction
 function! ReVIEWTable() range
   call ReVIEWEndOfBlock(a:lastline)
   call append(a:firstline-1, '//table[][]{')
+  call append(a:firstline, '----')
 endfunction
+
 map gh1 :call ReVIEWCaption(1)
 map gh2 :call ReVIEWCaption(2)
 map gh3 :call ReVIEWCaption(3)
