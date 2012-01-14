@@ -24,6 +24,10 @@ function! ReVIEWCmd() range
   call ReVIEWEndOfBlock(a:lastline)
   call append(a:firstline-1, '//cmd{')
 endfunction
+function! ReVIEWTable() range
+  call ReVIEWEndOfBlock(a:lastline)
+  call append(a:firstline-1, '//table[][]{')
+endfunction
 map gh1 :call ReVIEWCaption(1)
 map gh2 :call ReVIEWCaption(2)
 map gh3 :call ReVIEWCaption(3)
@@ -31,6 +35,7 @@ map gh4 :call ReVIEWCaption(4)
 map gl :call ReVIEWList()
 map ge :call ReVIEWEmlist()
 map gc :call ReVIEWCmd()
+map gt :call ReVIEWTable()
 
 call SurroundRegister('b', 't', "@<tt>{\r}")
 call SurroundRegister('b', 'k', "@<kw>{\r}")
