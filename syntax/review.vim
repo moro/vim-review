@@ -10,10 +10,10 @@ endif
 
 syn case match
 
-syn match reviewCaption1  "^=\s\+.\+"
-syn match reviewCaption2  "^==\s\+.\+"
-syn match reviewCaption3  "^===\s\+.\+"
-syn match reviewCaption4  "^====\s\+.\+"
+syn match reviewCaption1  "^=\({.*}\)\?\s\+.\+"
+syn match reviewCaption2  "^==\({.*}\)\?\s\+.\+"
+syn match reviewCaption3  "^===\({.*}\)\?\s\+.\+"
+syn match reviewCaption4  "^====\({.*}\)\?\s\+.\+"
 syn match reviewColumn    "^=\+\[column\]\s\+.\+"
 syn match reviewFootnote  "^//footnote\[.*\]\[.*\]"
 
