@@ -10,10 +10,10 @@ endif
 
 syn case match
 
-syn match reviewCaption1  "^=\s\+.\+"
-syn match reviewCaption2  "^==\s\+.\+"
-syn match reviewCaption3  "^===\s\+.\+"
-syn match reviewCaption4  "^====\s\+.\+"
+syn match reviewCaption1  "^=\({.*}\)\?\s\+.\+"
+syn match reviewCaption2  "^==\({.*}\)\?\s\+.\+"
+syn match reviewCaption3  "^===\({.*}\)\?\s\+.\+"
+syn match reviewCaption4  "^====\({.*}\)\?\s\+.\+"
 syn match reviewColumn    "^=\+\[column\]\s\+.\+"
 syn match reviewFootnote  "^//footnote\[.*\]\[.*\]"
 
@@ -33,7 +33,7 @@ syn region reviewCmdCap start="^//cmd{" end="^//}"
 syn region reviewQuote  start="^//quote{" end="^//}"
 syn region reviewImage  start="^//image\[.*\]\[.*\]{" end="^//}"
 syn region reviewTable  start="^//table\[.*\]\[.*\]{" end="^//}"
-syn match reviewRef      "@<[a-z]\+>{.\{-\}}"
+syn match reviewRef      "@<[a-z]\+>{.\{-\}\\\@<!}"
 
 syn match reviewComment "^#@#.*"
 syn match reviewWarn "^#@warn(.*)"
